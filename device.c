@@ -398,8 +398,8 @@ int mhidevice_detect(char *qmichannel, char *usbnet_adapter, PROFILE_T *profile)
         strcpy(qmichannel, "/dev/mhi_MBIM");
         profile->software_interface = SOFTWARE_MBIM;
     }
-    else if (!access("/dev/mhi_QMI0", F_OK)) {
-        strcpy(qmichannel, "/dev/mhi_QMI0");
+    else if (!access("/dev/mhi_0306_01.01.00_pipe_14", F_OK)) {
+        strcpy(qmichannel, "/dev/mhi_0306_01.01.00_pipe_14");
         profile->software_interface = SOFTWARE_QMI;
     }
     else {
